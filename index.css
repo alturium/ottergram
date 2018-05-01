@@ -18,13 +18,15 @@ li {
 
 img {
   width:50%;
-  border: green 1px solid;
+  display: block;  /* affect me within my parent container */
+  /* border: green 1px solid; */
 }
 
 .thumbnail-title {
-  display: block;
+  display: block;  /* occupy the entire width by their containing element */
   width :50%;
-  border: red 1px solid;
+  margin: 0;
+  /* border: red 1px solid; */
   background: rgb(96,125,139);
   color: rgb(202,238,255);
 }
