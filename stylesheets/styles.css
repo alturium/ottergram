@@ -30,6 +30,22 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: white;
+}
+/* added this to force scrollbar horizontal */
+/* ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color:  rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  box-shadow: 5px 10px #888888;
+} */
+
 .logo-text {
   font-family: lakeshore;
   background: white;
@@ -42,12 +58,15 @@ a {
   /* override the ul padding so image are not indented */
   list-style: none;
   padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .thumbnail-item {
-  display: flex;
-  position: relative;
-  width: 50%;
+  display: inline-block;
+  /* position: relative; */
+  margin: 0;
+  width: 125px;
   /* border: blue 1px solid; */
   border: 1px solid rgb(100%, 100%, 100%); /* fallback for some browsers */
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
@@ -61,10 +80,11 @@ a {
   */
 /* use sibling combinator + to exclude first item */
 .thumbnail-item + .thumbnail-item {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .thumbnail-image {
+  height: 10%;
   width: 100%; /* setting width constrains to parent's container width */
   /* note images default to display:inline which adheres to text rendering rules, where letters have
     * a baseline.  Eg. some characters such as p have a descender, so there is whitespace below them 
@@ -82,6 +102,12 @@ a {
   background: rgb(96, 125, 139);
   color: rgb(202, 238, 255);
 }
+
+.detail-image {
+  width: 90%;
+}
+
+/* PLAYGROUND BELOW HERE */
 
 .parent-container {
   display: flex; /* layout strategy for children */
