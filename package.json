@@ -1,7 +1,8 @@
 {
-  "name": "ottergram-2",
+  "name": "ottergram-4",
   "version": "1.0.0",
-  "description": "",
+  "description":
+    "Expand ottergram for chapter 4, Responsive layouts ith Flexbox.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
