@@ -16,8 +16,14 @@ footer {
   background: cornflowerblue;
   color: inherit;
 }
+html, body {
+  height: 100%;
+}
 
 body {
+  display: flex;   /* main axis goes left to right */
+  flex-direction: column; /* main axis goes top to bottom now */
+  font-size: 10px;
   background: rgb(149, 194, 215);
 }
 
@@ -33,6 +39,16 @@ a {
 button {
   background-color: white;
 }
+
+.main-header {
+  flex: 0 1 auto;  /* 0 do not grow larger, 1 i will shrink as needed, auto please calc my size */
+}
+
+.main-content {
+  flex: 1 1 auto;   /* 1 grow as much as possible, relative to sibling (header) */
+  flex-direction: column;
+}
+
 /* added this to force scrollbar horizontal */
 /* ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -55,6 +71,10 @@ button {
 }
 
 .thumbnail-list {
+  flex: 0 1 auto;
+  order: 2;   /* draw after any siblings that have lower source order */
+  display: flex;
+  justify-content: space-between;
   /* override the ul padding so image are not indented */
   list-style: none;
   padding: 0;
@@ -65,6 +85,10 @@ button {
 .thumbnail-item {
   display: inline-block;
   /* position: relative; */
+  min-width: 120px;
+  max-width: 120px;
+  /* margin: 0; */
+  /* width: 125px; */
   margin: 0;
   width: 125px;
   /* border: blue 1px solid; */
@@ -103,9 +127,28 @@ button {
   color: rgb(202, 238, 255);
 }
 
+.detail-image-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-image-frame {
+  position: relative;
+  text-align: center;
+}
+
 .detail-image {
   width: 90%;
 }
+.detail-image-title {
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+  color: white;
+  font-size: 40px;
+  text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+ }
 
 /* PLAYGROUND BELOW HERE */
 
