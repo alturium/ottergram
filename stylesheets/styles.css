@@ -89,6 +89,8 @@ button {
   max-width: 120px;
   /* margin: 0; */
   /* width: 125px; */
+  margin: 0;
+  width: 125px;
   /* border: blue 1px solid; */
   border: 1px solid rgb(100%, 100%, 100%); /* fallback for some browsers */
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
@@ -139,7 +141,6 @@ button {
 .detail-image {
   width: 90%;
 }
-
 .detail-image-title {
   position: absolute;
   bottom: 5px;
