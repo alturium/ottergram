@@ -1,5 +1,5 @@
 document.getElementById("app").innerHTML = `
-<h1 class="logo-text">Ottergram (codesandbox version)!</h1>
+<h1 class="logo-text">Ottergram</h1>
 <div>
   Look
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>
