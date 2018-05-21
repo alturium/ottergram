@@ -38,6 +38,12 @@ a {
   text-decoration: none;
 }
 
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .logo-text {
   font-family: lakeshore;
   background: white;
@@ -107,8 +113,8 @@ a {
 /* switchd from absolute with anchors to flex */
 .detail-image-container {
   min-width: auto;
-  min-height: auto;
-  overflow: hidden;
+  min-height: 200px;
+  /* overflow: hidden; */
   order: 2;
   flex: 1 1 auto;
   display: flex;
@@ -130,6 +136,13 @@ a {
   color: white;
   font-size: 40px;
   text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+@media all and (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
 }
 
 /*
