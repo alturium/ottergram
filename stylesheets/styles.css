@@ -55,6 +55,7 @@ button {
 .main-content {
   flex: 1 1 auto;   /* 1 grow as much as possible, relative to sibling (header) */
   flex-direction: column;
+   display: flex;
 }
 
 /* added this to force scrollbar horizontal */
@@ -152,8 +153,8 @@ button {
 /* switchd from absolute with anchors to flex */
 .detail-image-container {
   min-width: auto;
-  min-height: auto;
-  overflow: hidden;
+  min-height: 200px;
+  /* overflow: hidden; */
   order: 2;
   flex: 1 1 auto;
   display: flex;
@@ -175,6 +176,13 @@ button {
   color: white;
   font-size: 40px;
   text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+@media all and (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
 }
 
 /*
